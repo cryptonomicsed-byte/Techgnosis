@@ -111,6 +111,16 @@ function dispatch_opcode(opcode::UInt8, args::Dict{Symbol,Any})::Dict
         
         result = GenesisMint.mint_genesis_ashe(amount, block_num)
         return result
+
+    elseif opcode == 0x2b  # VEIL (PID simulation via VeilSim)
+        veil_id = Int(get(args, :veil_id, 1))
+        params = Dict(
+            :kp => Float64(get(args, :kp, 0.1)),
+            :ki => Float64(get(args, :ki, 0.01)),
+            :kd => Float64(get(args, :kd, 0.05))
+        )
+        result = JuliaFFI.techgnosis_veil_sim(veil_id, params)
+        return merge(Dict("opcode" => "VEIL"), result)
         
     else
         return Dict("opcode" => "UNKNOWN", "code" => Int(opcode))

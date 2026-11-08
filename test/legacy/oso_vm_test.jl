@@ -46,6 +46,20 @@ using .OsoVM
     ir4 = OsoCompiler.compile(source4)
     results4 = OsoVM.execute_ir(ir4)
     @test results4[1]["opcode"] == "SABBATH"
+
+    # Test 5: @veil (VEIL opcode 0x2b — PID simulation via VeilSim)
+    source5 = """
+    @veil(veil_id=1, kp=0.1, ki=0.01, kd=0.05) {
+    }
+    """
+    ir5 = OsoCompiler.compile(source5)
+    results5 = OsoVM.execute_ir(ir5)
+    @test results5[1]["opcode"] == "VEIL"
+    @test haskey(results5[1], "f1_score")
+    @test haskey(results5[1], "ase_minted")
+    @test haskey(results5[1], "veil_id")
+    @test 0.0 ≤ results5[1]["f1_score"] ≤ 1.0
+    @test results5[1]["ase_minted"] ∈ [0.0, 2.5, 5.0]
 end
 
 println("✅ All OSO tests passed!")
