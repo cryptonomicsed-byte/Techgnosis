@@ -9,6 +9,10 @@ declared_names = 181
 dispatched = 168
 unimplemented = 5
 
+[[deleted]]
+byte = "0x11"
+reason = "opcode 0x11 has been removed; no replacement"
+
 [[opcode]]
 byte = "0x00"
 names = ["HALT"]
