@@ -1,0 +1,1048 @@
+# OPCODE_SPEC.toml — GENERATED. Do not edit by hand.
+# Source of truth: src/oso_vm.jl, measured by executing every byte
+# (tools/opcode_probe.jl). Regenerate: tools/opcode_spec.py generate
+
+[meta]
+source = "src/oso_vm.jl execute_instruction (the /run path)"
+declared_bytes = 173
+declared_names = 181
+dispatched = 168
+unimplemented = 5
+
+[[opcode]]
+byte = "0x00"
+names = ["HALT"]
+status = "dispatched"
+critical = false
+
+[[opcode]]
+byte = "0x01"
+names = ["NOOP"]
+status = "dispatched"
+critical = false
+
+[[opcode]]
+byte = "0x12"
+names = ["VEIL"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x17"
+names = ["CASTING"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x18"
+names = ["PROJECT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x19"
+names = ["JOB"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x1a"
+names = ["SHIFT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x1b"
+names = ["MILESTONE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x1c"
+names = ["DELIVERABLE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x1d"
+names = ["TIMESHEET"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x1e"
+names = ["INVOICE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x1f"
+names = ["RECEIPT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x20"
+names = ["STAKE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x21"
+names = ["UNSTAKE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x22"
+names = ["TRANSFER"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x23"
+names = ["BALANCE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x24"
+names = ["CONTRACT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x25"
+names = ["DISPUTE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x26"
+names = ["BIPON_SEED"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x27"
+names = ["TITHE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x28"
+names = ["NONREENTRANT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x29"
+names = ["REQUIRE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x2a"
+names = ["EMIT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x2b"
+names = ["GENESIS_FLAW_TOKEN"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x2c"
+names = ["CALL"]
+status = "unimplemented"
+critical = false
+
+[[opcode]]
+byte = "0x2d"
+names = ["DELEGATE"]
+status = "unimplemented"
+critical = false
+
+[[opcode]]
+byte = "0x2e"
+names = ["CREATE"]
+status = "unimplemented"
+critical = false
+
+[[opcode]]
+byte = "0x2f"
+names = ["SELFDESTRUCT"]
+status = "unimplemented"
+critical = false
+
+[[opcode]]
+byte = "0x30"
+names = ["CANDIDATE_APPLY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x31"
+names = ["COUNCIL_APPROVE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x32"
+names = ["FINAL_SIGN"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x33"
+names = ["DISTRIBUTE_OFFERING"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x34"
+names = ["CLAIM_REWARDS"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x35"
+names = ["TIMESTAMP"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x36"
+names = ["BLOCKHASH"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x37"
+names = ["CHAINID"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x38"
+names = ["ORIGIN"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x39"
+names = ["GASPRICE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x3a"
+names = ["COINBASE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x3b"
+names = ["DIFFICULTY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x3c"
+names = ["AGENT_CONVERT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x3d"
+names = ["JOB_PAYMENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x3e"
+names = ["AGENT_BIRTH"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x3f"
+names = ["GPU_CONTRIBUTION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x40"
+names = ["PROPOSAL"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x41"
+names = ["VOTE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x42"
+names = ["DELEGATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x43"
+names = ["QUORUM"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x44"
+names = ["EXECUTION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x45"
+names = ["VETO"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x46"
+names = ["AMENDMENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x47"
+names = ["IMPEACHMENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x48"
+names = ["ELECTION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x49"
+names = ["TERM"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x4a"
+names = ["CABINET"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x4b"
+names = ["COMMITTEE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x4c"
+names = ["REFERENDUM"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x4d"
+names = ["CONSTITUTION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x4e"
+names = ["LAW"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x4f"
+names = ["COURT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x50"
+names = ["VERDICT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x51"
+names = ["APPEAL"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x52"
+names = ["PARDON"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x53"
+names = ["SANCTION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x54"
+names = ["TOC_MINT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x55"
+names = ["TOC_DECAY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x56"
+names = ["COMPUTE_PROOF"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x57"
+names = ["VEIL_GRANT"]
+status = "unimplemented"
+critical = false
+
+[[opcode]]
+byte = "0x60"
+names = ["RITE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x61"
+names = ["TRANSMISSION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x62"
+names = ["INVOCATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x63"
+names = ["TRIBUTE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x64"
+names = ["ATTUNEMENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x65"
+names = ["BINDING"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x66"
+names = ["SEER"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x67"
+names = ["KEEPER"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x68"
+names = ["ASPIRANT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x69"
+names = ["SANCTUM"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x6a"
+names = ["ARTIFACT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x6b"
+names = ["CODEX"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x6c"
+names = ["TRANSGRESSION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x6d"
+names = ["BANISH"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x6e"
+names = ["ENSHRINE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x6f"
+names = ["MANIFESTATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x70"
+names = ["PASSAGE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x71"
+names = ["VIGIL"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x72"
+names = ["CONVOCATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x73"
+names = ["CONSECRATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x74"
+names = ["RESONANCE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x75"
+names = ["DISCLOSURE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x76"
+names = ["ATONEMENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x77"
+names = ["RELEASE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x78"
+names = ["RENEWAL"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x80"
+names = ["PATIENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x81"
+names = ["DIAGNOSIS"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x82"
+names = ["TREATMENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x83"
+names = ["PRESCRIPTION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x84"
+names = ["SURGERY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x85"
+names = ["THERAPY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x86"
+names = ["VITALS"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x87"
+names = ["ADMISSION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x88"
+names = ["DISCHARGE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x89"
+names = ["EMERGENCY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x8a"
+names = ["TRIAGE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x8b"
+names = ["WARD"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x8c"
+names = ["ICU"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x8d"
+names = ["MORGUE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x8e"
+names = ["AUTOPSY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x8f"
+names = ["QUARANTINE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x90"
+names = ["VACCINE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x91"
+names = ["PANDEMIC"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x92"
+names = ["RECOVERY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0x93"
+names = ["RELAPSE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa0"
+names = ["ORISA_OBATALA", "WISDOM"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa1"
+names = ["ORISA_OGUN", "THE_FORGE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa2"
+names = ["CREATION", "ORISA_YEMOJA"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa3"
+names = ["DIVINE_JUSTICE", "ORISA_SANGO"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa4"
+names = ["MEMORY", "ORISA_OSHUN"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa5"
+names = ["FLOW", "ORISA_OYA"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa6"
+names = ["ORISA_ESU", "THE_MESSENGER"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa7"
+names = ["ORISA_ORUNMILA", "THE_ORACLE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa8"
+names = ["IFA_DIVINATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xa9"
+names = ["ODU"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xaa"
+names = ["ESE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xab"
+names = ["EBO"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xac"
+names = ["ASE_INVOCATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xad"
+names = ["ANCESTRAL_CALL"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xae"
+names = ["LIBATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xaf"
+names = ["INITIATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb0"
+names = ["DIVINER"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb1"
+names = ["SAGE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb2"
+names = ["LUMINARY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb3"
+names = ["HAVEN"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb4"
+names = ["COLLECTIVE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb5"
+names = ["ORI"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb6"
+names = ["ANCESTOR"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb7"
+names = ["ADVERSARY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xb8"
+names = ["TWIN"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc0"
+names = ["MARKET"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc1"
+names = ["ORDER"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc2"
+names = ["LIQUIDITY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc3"
+names = ["SWAP"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc4"
+names = ["YIELD"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc5"
+names = ["BOND"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc6"
+names = ["EQUITY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc7"
+names = ["DIVIDEND"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc8"
+names = ["INTEREST"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xc9"
+names = ["COLLATERAL"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xca"
+names = ["LOAN"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xcb"
+names = ["REPAYMENT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xcc"
+names = ["DEFAULT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xcd"
+names = ["LIQUIDATION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xce"
+names = ["AUCTION"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xcf"
+names = ["INSURANCE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xd0"
+names = ["CLAIM"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xd1"
+names = ["PREMIUM"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xd2"
+names = ["UNDERWRITE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xd3"
+names = ["HEDGE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe0"
+names = ["BATCH"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe1"
+names = ["SCHEDULE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe2"
+names = ["NOTIFY"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe3"
+names = ["LOG"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe4"
+names = ["ARCHIVE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe5"
+names = ["BACKUP"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe6"
+names = ["RESTORE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe7"
+names = ["MIGRATE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe8"
+names = ["ROLLBACK"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xe9"
+names = ["CHECKPOINT"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xf0"
+names = ["GLYPH_STORE"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xf1"
+names = ["GLYPH_EXPAND"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xf2"
+names = ["GLYPH_SEARCH"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xf3"
+names = ["GLYPH_ANCHOR"]
+status = "dispatched"
+critical = true
+
+[[opcode]]
+byte = "0xf4"
+names = ["GLYPH_AUDIT"]
+status = "dispatched"
+critical = true

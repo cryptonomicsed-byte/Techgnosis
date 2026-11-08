@@ -1,0 +1,51 @@
+# TECHGNOSIS_BINDINGS.toml — attribute -> OSOVM opcode NAME. Never a byte.
+#
+# Bytes are resolved at compile time from OPCODE_SPEC.toml, which is generated
+# from the live VM (OSOVM tools/opcode_spec.py). An attribute that is not bound
+# here is a compile error, not 0x00 (which is HALT).
+#
+# Only bindings whose meaning is unambiguous are present: the attribute and the
+# OSOVM opcode share a name. Before this file, 25 of the 27 attributes compiled
+# to a byte that means something else in OSOVM -- @sabbath to NONREENTRANT,
+# @veil to GENESIS_FLAW_TOKEN (a mint), @impact to a byte deleted for being a
+# caller-priced mint.
+#
+# The remaining 22 attributes need a binding decided against the VM's actual
+# opcode set (the plan's TECHGNOSIS_OPCODES.toml). Adding one here is a one-line
+# change; until then they refuse to compile.
+
+[bind]
+biponSeed        = "BIPON_SEED"
+tithe            = "TITHE"
+nonreentrant     = "NONREENTRANT"
+genesisFlawToken = "GENESIS_FLAW_TOKEN"
+veil             = "VEIL"
+
+# Attributes that are deliberately NOT opcodes. Compiling one is an error with
+# this reason, so the author learns what to do instead.
+[not_an_opcode]
+sabbath = "the sabbath is a temporal gate enforced by the runtime, not an instruction; remove @sabbath"
+impact  = "IMPACT was deleted: a caller-priced Àṣẹ mint (I-12/I-13). Submit evidence; the protocol computes the reward"
+
+# The three primitives as macro-expansions over opcodes (plan 2.4). They are not
+# new instructions: each expands to a sequence of OPCODE NAMES, every one of
+# which must be dispatched by the VM, and the primitive's own args are passed to
+# every step.
+#
+# `requires` names gates the primitive must pass THROUGH. If a required gate has
+# no opcode in the VM, the primitive refuses to compile -- expanding `think`
+# without its hermetic gate would let a program authorise its own action, which
+# is the exact hole I-2 exists to close.
+
+[macro.birth]
+steps    = ["BIPON_SEED", "GENESIS_FLAW_TOKEN", "AGENT_BIRTH", "RECEIPT"]
+requires = []
+
+[macro.think]
+steps    = ["IFA_DIVINATION", "VEIL"]
+requires = ["HERMETIC_GATE"]   # plan B4: the scorer returns 0.0 for all seven principles; no opcode yet
+
+[macro.act]
+steps    = ["RECEIPT"]         # plus the one domain opcode named by `op=`
+requires = ["CAPABILITY_CHECK"] # I-7: no capability-check opcode exists in the VM yet
+domain   = true
